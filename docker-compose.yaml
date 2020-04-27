@@ -1,0 +1,10 @@
+version: "2"
+services:
+  quakejs:
+    container_name: quake3
+    ports:
+      - "27960:27960/udp"
+    volumes:
+      - ./q3-server/baseq3/pak0.pk3:/usr/share/games/quake3/baseq3/pak0.pk3
+      - ./server.cfg:/usr/share/games/quake3/baseq3/server.cfg
+    image: inanimate/quake3
